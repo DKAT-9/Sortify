@@ -37,7 +37,7 @@ export default function Home() {
       <a href="#" className="brand"><span className="brand-icon"><Icon name="leaf" size={25}/></span>sortify<span className="brand-period">.</span></a>
       <div className="workspace-label">CAMPUS OPERATIONS</div>
       <a className="nav-item active" href="#overview"><Icon name="grid"/> Overview <span className="nav-dot"/></a>
-      <div className="sidebar-bottom"><div className="eco-icon"><Icon name="leaf" size={23}/></div><strong>A cleaner campus.<br/>A greener tomorrow.</strong><p>Small actions. Lasting impact.</p><div className="sidebar-rule"/><div className="team"><span className="avatar">FC</span><div><strong>Facilities crew</strong><small>Campus workspace</small></div></div></div>
+      <div className="sidebar-bottom"><div className="eco-icon"><Icon name="leaf" size={23}/></div><strong>A cleaner campus.<br/>A greener tomorrow.</strong><p>Small actions. Lasting impact.</p><div className="sidebar-rule"/><div className="team"><span className="avatar">FC</span><div><strong>Tufts Faciliies</strong></div></div></div>
     </aside>
 
     <div className="main-shell">
