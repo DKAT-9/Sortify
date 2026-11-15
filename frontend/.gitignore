@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local sensor readings
+/data/live-bins.json
+/data/live-bins.json.tmp

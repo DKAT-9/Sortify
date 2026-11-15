@@ -14,3 +14,10 @@
 .stats{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:28px}
 @media(max-width:850px){.bin-row{grid-template-columns:minmax(0,1fr) 145px}.list-head{display:none}.priority{grid-column:1/-1}}
 @media(max-width:560px){.bin-row{grid-template-columns:1fr}.bin-location{grid-column:auto}.demo-control button{margin-left:0}.demo-control>span{width:100%}}
+
+/* Sensor-calibrated fill levels alongside binary collection status. */
+.list-head,.bin-row{grid-template-columns:minmax(0,2.6fr) minmax(105px,.8fr) minmax(125px,.9fr) minmax(145px,1fr)}
+.calibration-note{font-size:12px;color:#778178}
+@media(max-width:1180px){.list-head,.bin-row{gap:12px;grid-template-columns:minmax(0,2fr) 100px 125px 130px}}
+@media(max-width:850px){.bin-row{grid-template-columns:minmax(0,1.7fr) 100px 125px}.priority{grid-column:1/-1}}
+@media(max-width:560px){.bin-row{grid-template-columns:1fr auto}.bin-location{grid-column:1/-1}.priority{grid-column:1/-1}}

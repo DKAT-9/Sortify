@@ -4,6 +4,9 @@ export type Bin = {
   floor: number;
   description: string;
   name?: string;
+  distanceCm?: number | null;
+  lastSeen?: string;
+  fillLevel: number | null;
   status: 'full' | 'not full';
   fullSince: string | null;
 };
@@ -12,18 +15,17 @@ export type Bin = {
 export const demoTime = new Date('2026-11-14T15:30:00-05:00');
 export const demoBin: Bin = {
   id: 'SRT-DEMO', name: 'Demo bin', building: 'TTC', floor: 2,
-  description: 'Room 208.', status: 'not full', fullSince: null,
+  description: 'Room 208.', fillLevel: null, status: 'not full', fullSince: null,
 };
 
 export const bins: Bin[] = [
-  { id: 'SRT-001', building: 'Tisch Library', floor: 2, description: 'Behind room 223, on the left beside the study lounge entrance.', status: 'full', fullSince: '2026-11-14T13:05:00-05:00' },
-  { id: 'SRT-002', building: 'Campus Center', floor: 1, description: 'Next to the info, opposite the east entrance.', status: 'full', fullSince: '2026-11-14T14:18:00-05:00' },
-  { id: 'SRT-003', building: 'Science Hall', floor: 3, description: 'Outside lab 310, at the end of the corridor near the elevators.', status: 'full', fullSince: '2026-11-14T15:02:00-05:00' },
-  { id: 'SRT-004', building: 'Campus Center', floor: 2, description: 'Next to Hotung Cafe, to the right of the vending machines.', status: 'not full', fullSince: null },
-  { id: 'SRT-005', building: 'Tisch Library', floor: 1, description: 'Past the front desk, beside the ground-floor printing station.', status: 'not full', fullSince: null },
-  { id: 'SRT-006', building: 'JCC', floor: 1, description: 'In the main lobby, underneath the notice board by the stairs.', status: 'not full', fullSince: null },
-  { id: 'SRT-007', building: 'Tisch Library', floor: 3, description: 'Beside the quiet reading area, across from room 305.', status: 'not full', fullSince: null },
-  { id: 'SRT-008', building: 'Campus Center', floor: 0, description: 'At the bottom of the west staircase, next to the courtyard doors.', status: 'not full', fullSince: null },
+  { id: 'SRT-001', building: 'Tisch Library', floor: 2, description: 'Behind room 223, on the left beside the study lounge entrance.', fillLevel: 100, status: 'full', fullSince: '2026-11-14T13:05:00-05:00' },
+  { id: 'SRT-002', building: 'Campus Center', floor: 1, description: 'Next to the info, opposite the east entrance.', fillLevel: 100, status: 'full', fullSince: '2026-11-14T14:18:00-05:00' },
+  { id: 'SRT-003', building: 'Halligan', floor: 2, description: 'Outside lab 210, at the end of the corridor near the elevators.', fillLevel: 100, status: 'full', fullSince: '2026-11-14T15:02:00-05:00' },
+  { id: 'SRT-004', building: 'Campus Center', floor: 2, description: 'Next to Hotung Cafe, to the right of the vending machines.', fillLevel: 87, status: 'not full', fullSince: null },
+  { id: 'SRT-005', building: 'Music Library', floor: 1, description: 'Past the front desk, beside the ground-floor printing station.', fillLevel: 74, status: 'not full', fullSince: null },
+  { id: 'SRT-006', building: 'JCC', floor: 1, description: 'In the main lobby, underneath the notice board by the stairs.', fillLevel: 52, status: 'not full', fullSince: null },
+  { id: 'SRT-007', building: 'Hill Hall', floor: 3, description: 'Beside the quiet reading area, across from room 305.', fillLevel: 31, status: 'not full', fullSince: null },
 ];
 
 export function sortBins(items: Bin[]) {
